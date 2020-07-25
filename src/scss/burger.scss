@@ -1,0 +1,72 @@
+#menu__toggle {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    &:checked~.menu__btn {
+        background-color: $c-black;
+        & span {
+            background-color: $c-light;
+        }
+    }
+    &:checked~.menu__box {
+        visibility: visible;
+        right: 0;
+    }
+}
+
+.menu {
+    &__btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        transition: $transition-base;
+        cursor: none;
+        &:hover {
+            background-color: $c-grey;
+            span {
+                background-color: $c-light;
+            }
+        }
+        span {
+            display: block;
+            height: 1px;
+            width: 100%;
+            background-color: $c-grey;
+        }
+    }
+    &__box {
+        position: absolute;
+        z-index: 100;
+        display: inline-block;
+        visibility: hidden;
+        top: 19px;
+        right: -400%;
+        transition: $transition-base;
+        text-align: right;
+        ul {
+            list-style: none;
+            li a {
+                cursor: none;
+            }
+        }
+    }
+    &__item {
+        font-family: 'TT Travels';
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        color: $c-black;
+        transition: $transition-base;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

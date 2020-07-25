@@ -1,0 +1,36 @@
+        @import "./mixins.scss";
+        @import "./vars.scss";
+        @import "./fonts.scss";
+        @import "./cursor.scss";
+        @import "./modelbox.scss";
+        @import "./burger.scss";
+        @import "./header.scss";
+        @import "./footer.scss";
+        @import "./swiper.scss";
+        @import "./svg-animate.scss";
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            cursor: none;
+        }
+        
+        body {
+            position: relative;
+        }
+        
+        .container {
+            padding: 0 48px;
+            @include respond-below(md_plus) {
+                padding: 0 32px;
+            }
+            @include respond-below(sm) {
+                padding: 0 24px;
+            }
+            @include respond-below(xs) {
+                padding: 0 20px;
+            }
+        }

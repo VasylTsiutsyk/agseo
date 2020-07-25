@@ -1,0 +1,33 @@
+.header {
+    &__wrap {
+        padding: 40px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include respond-below(md_plus) {
+            padding: 27px 0;
+        }
+        @include respond-below(sm) {
+            padding: 33px 0;
+        }
+        @include respond-below(xs) {
+            padding: 16px 0;
+        }
+    }
+    &__logo {
+        font-family: 'GT America';
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: -1px;
+        color: $c-black;
+        @include respond-below(sm) {
+            font-size: 15px;
+        }
+    }
+    &__burger {
+        position: relative;
+        width: 30px;
+        height: 19px;
+    }
+}

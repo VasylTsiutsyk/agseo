@@ -1,0 +1,43 @@
+.footer {
+    &__wrap {
+        padding: 40px 0;
+        @include respond-below(md_plus) {
+            padding: 32px 0;
+        }
+        @include respond-below(sm) {
+            padding: 24px 0;
+        }
+        @include respond-below(xs) {
+            padding: 20px 0;
+        }
+    }
+    .soc__list {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin: 0 -8px;
+        list-style: none;
+        li {
+            margin: 8px;
+            display: flex;
+            align-items: center;
+            a {
+                font-family: "TT Travels";
+                font-size: 11px;
+                line-height: 13px;
+                letter-spacing: 0.02em;
+                color: $c-black;
+                text-transform: capitalize;
+                text-decoration: none;
+                cursor: none;
+            }
+        }
+        .soc__line {
+            display: inline-block;
+            width: 56px;
+            height: 1px;
+            background-color: $c-grey;
+            opacity: 0.24;
+        }
+    }
+}

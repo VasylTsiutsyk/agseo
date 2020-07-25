@@ -1,0 +1,86 @@
+.mb-pos {
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mb--left {
+    width: 238px;
+    height: 331px;
+    left: 229.19px;
+    top: 201.76px;
+    background-image: url('/img/girl1.png');
+    transform: rotate(1.1deg);
+    @include respond-below(md_plus) {
+        width: 163px;
+        height: 226px;
+        left: 162.13px;
+        top: 255.56px;
+    }
+    @include respond-below(md) {
+        width: 163px;
+        height: 226px;
+        left: 28.32px;
+        top: 383.56px;
+    }
+    @include respond-below(sm) {
+        display: none;
+    }
+}
+
+.mb--center {
+    width: 476px;
+    height: 702px;
+    left: 491.27px;
+    top: 73.89px;
+    background-image: url('/img/girl2.png');
+    transform: rotate(1.5deg);
+    @include respond-below(md_plus) {
+        width: 359px;
+        height: 530px;
+        left: 339px;
+        top: 147px;
+    }
+    @include respond-below(md) {
+        width: 359px;
+        height: 530px;
+        left: 205.19px;
+        top: 275px;
+    }
+    @include respond-below(sm) {
+        width: 273px;
+        height: 403px;
+        left: 76px;
+        top: 163px;
+    }
+    @include respond-below(xs) {
+        width: 249.67px;
+        height: 368.56px;
+        left: 68.18px;
+        top: 159px;
+    }
+}
+
+.mb--right {
+    width: 345px;
+    height: 238px;
+    left: 890.32px;
+    top: 494.97px;
+    background-image: url('/img/girl3.png');
+    transform: rotate(2.03deg);
+    @include respond-below(md_plus) {
+        width: 234px;
+        height: 162px;
+        left: 644.37px;
+        top: 473.91px;
+    }
+    @include respond-below(md) {
+        width: 234px;
+        height: 162px;
+        left: 510.56px;
+        top: 601.91px;
+    }
+    @include respond-below(sm) {
+        display: none;
+    }
+}
