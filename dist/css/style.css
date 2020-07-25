@@ -75,7 +75,7 @@
   height: 331px;
   left: 229.19px;
   top: 201.76px;
-  background-image: url("/img/girl1.png");
+  background-image: url("../img/girl1.png");
   -webkit-transform: rotate(1.1deg);
   -ms-transform: rotate(1.1deg);
   transform: rotate(1.1deg);
@@ -86,7 +86,7 @@
   height: 702px;
   left: 491.27px;
   top: 73.89px;
-  background-image: url("/img/girl2.png");
+  background-image: url("../img/girl2.png");
   -webkit-transform: rotate(1.5deg);
   -ms-transform: rotate(1.5deg);
   transform: rotate(1.5deg);
@@ -97,7 +97,7 @@
   height: 238px;
   left: 890.32px;
   top: 494.97px;
-  background-image: url("/img/girl3.png");
+  background-image: url("../img/girl3.png");
   -webkit-transform: rotate(2.03deg);
   -ms-transform: rotate(2.03deg);
   transform: rotate(2.03deg);
@@ -493,9 +493,9 @@ body {
   }
 }
 @supports (-webkit-appearance:none){
-.mb--left{background-image:url("/img/girl1.webp")}
-.mb--center{background-image:url("/img/girl2.webp")}
-.mb--right{background-image:url("/img/girl3.webp")}
+.mb--left{background-image:url("../img/girl1.webp")}
+.mb--center{background-image:url("../img/girl2.webp")}
+.mb--right{background-image:url("../img/girl3.webp")}
 }
 
  @media (max-width: 1023px){

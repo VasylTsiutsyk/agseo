@@ -9,7 +9,7 @@
     height: 331px;
     left: 229.19px;
     top: 201.76px;
-    background-image: url('/img/girl1.png');
+    background-image: url('../img/girl1.png');
     transform: rotate(1.1deg);
     @include respond-below(md_plus) {
         width: 163px;
@@ -33,7 +33,7 @@
     height: 702px;
     left: 491.27px;
     top: 73.89px;
-    background-image: url('/img/girl2.png');
+    background-image: url('../img/girl2.png');
     transform: rotate(1.5deg);
     @include respond-below(md_plus) {
         width: 359px;
@@ -66,7 +66,7 @@
     height: 238px;
     left: 890.32px;
     top: 494.97px;
-    background-image: url('/img/girl3.png');
+    background-image: url('../img/girl3.png');
     transform: rotate(2.03deg);
     @include respond-below(md_plus) {
         width: 234px;
