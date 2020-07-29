@@ -264,7 +264,14 @@
   color: black;
   text-transform: capitalize;
   text-decoration: none;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
   cursor: none;
+}
+
+.footer .soc__list li a:hover {
+  text-decoration: underline;
 }
 
 .footer .soc__list .soc__line {

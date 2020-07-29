@@ -29,7 +29,11 @@
                 color: $c-black;
                 text-transform: capitalize;
                 text-decoration: none;
+                transition: $transition-base;
                 cursor: none;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
         .soc__line {
