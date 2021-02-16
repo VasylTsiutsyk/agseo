@@ -156,12 +156,7 @@ gulp.task('otf2ttf', function () {
 });
 
 gulp.task('deploy', function () {
-  return gulp.src('./dist/**/*').pipe(
-    deploy({
-      remoteUrl: 'https://github.com/VasylTsiutsyk/agseo.git',
-      branch: 'master',
-    }),
-  );
+  return gulp.src('./dist/**/*').pipe(deploy());
 });
 
 function fontsStyle() {
