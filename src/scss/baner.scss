@@ -1,0 +1,223 @@
+.baner {
+  &__bg {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center 100%;
+  }
+  &__overlay {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(rgb(45, 62, 87), 0.9);
+  }
+  &__wrap {
+    position: relative;
+    z-index: 10;
+    padding: 110px 125px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include respond-below(lg) {
+      padding: 60px 40px;
+    }
+    @include respond-below(md_plus) {
+      padding: 60px 20px;
+    }
+    @include respond-below(md) {
+      padding: 40px 0;
+    }
+    @include respond-below(sm) {
+      flex-wrap: wrap;
+    }
+  }
+  &__text {
+    margin-right: 55px;
+    @include respond-below(sm) {
+      margin-right: 0;
+    }
+  }
+  &__title {
+    margin-bottom: 28px;
+    color: $color-white;
+    font-family: $ff-base;
+    font-size: 65px;
+    font-weight: 700;
+    text-transform: uppercase;
+    @include respond-below(lg) {
+      margin-bottom: 26px;
+      font-size: 50px;
+    }
+    @include respond-below(md_plus) {
+      margin-bottom: 24px;
+      font-size: 40px;
+    }
+    @include respond-below(md) {
+      margin-bottom: 20px;
+      font-size: 35px;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 30px;
+    color: $color-white;
+    font-family: $ff-base;
+    font-size: 34px;
+    font-weight: 500;
+    text-transform: uppercase;
+    @include respond-below(lg) {
+      margin-bottom: 28px;
+      font-size: 30px;
+    }
+    @include respond-below(md_plus) {
+      margin-bottom: 25px;
+      font-size: 26px;
+    }
+    @include respond-below(md) {
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+  }
+
+  p {
+    margin-bottom: 30px;
+    font-family: $ff-base;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $color-white;
+    @include respond-below(md_plus) {
+      margin-bottom: 20px;
+      font-size: 17px;
+    }
+    @include respond-below(md) {
+      margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @include respond-below(sm) {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    .highlight {
+      font-weight: 700;
+    }
+  }
+  &__form {
+    @include respond-below(sm) {
+      width: 100%;
+    }
+  }
+  .form {
+    margin: 40px 0;
+    padding: 48px 42px 46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 470px;
+    border-radius: 10px;
+    background-color: $color-white;
+    font-family: $ff-base;
+    @include respond-below(md_plus) {
+      padding: 30px;
+      max-width: 430px;
+    }
+    @include respond-below(md) {
+      padding: 20px;
+      max-width: 400px;
+    }
+    @include respond-below(sm) {
+      max-width: 350px;
+      margin: 40px auto;
+    }
+    @include respond-below(xs) {
+      max-width: 100%;
+    }
+    &__title {
+      margin-bottom: 30px;
+      color: $color-black;
+      font-family: $ff-base;
+      font-size: 34px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      @include respond-below(md_plus) {
+        margin-bottom: 27px;
+        font-size: 30px;
+      }
+      @include respond-below(md) {
+        margin-bottom: 24px;
+        font-size: 28px;
+      }
+      @include respond-below(sm) {
+        margin-bottom: 20px;
+        font-size: 26px;
+      }
+      @include respond-below(xs) {
+        font-size: 24px;
+      }
+    }
+    input[type='text'] {
+      width: 100%;
+      padding: 20px 30px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #f3f3f3;
+      @include respond-below(md_plus) {
+        padding: 18px 28px;
+      }
+      @include respond-below(md) {
+        padding: 16px 26px;
+      }
+      @include respond-below(sm) {
+        padding: 14px 24px;
+      }
+      @include respond-below(xs) {
+        padding: 10px;
+      }
+      &:last-child {
+        margin-bottom: 25px;
+      }
+    }
+    input[type='submit'] {
+      width: 100%;
+      padding: 23px 100px;
+      border: none;
+      border-radius: 7px;
+      background-color: $color-pink;
+      color: $color-white;
+      font-family: $ff-base;
+      font-size: 19px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      transition: $transition-base;
+      cursor: pointer;
+      @include respond-below(md_plus) {
+        padding: 22px 80px;
+      }
+      @include respond-below(md) {
+        font-size: 17px;
+        padding: 21px 60px;
+      }
+      @include respond-below(sm) {
+        padding: 20px 40px;
+      }
+      @include respond-below(xs) {
+        font-size: 16px;
+        padding: 15px 30px;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $color-pink-hover;
+      }
+    }
+  }
+}

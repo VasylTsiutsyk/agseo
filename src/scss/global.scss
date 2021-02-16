@@ -1,0 +1,119 @@
+.container {
+  margin: 0 auto;
+  max-width: 1610px;
+  padding: 0 20px;
+}
+
+.highlight {
+  color: $color-pink;
+}
+
+.subtitle.highlight {
+  color: $color-pink;
+}
+
+.highlight--black {
+  color: $color-black;
+}
+
+.btn {
+  border-radius: 24px;
+  padding: 15px 35px;
+  transition: $transition-base;
+}
+
+.btn--green {
+  background-color: $color-green;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $color-green-hover;
+  }
+}
+
+.btn--pink {
+  background-color: $color-pink;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $color-pink-hover;
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.text-white {
+  color: $color-white;
+}
+
+.title {
+  color: $color-black;
+  font-family: $ff-base;
+  font-size: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+  @include respond-below(lg) {
+    font-size: 32px;
+  }
+  @include respond-below(md_plus) {
+    font-size: 30px;
+  }
+  @include respond-below(md) {
+    font-size: 28px;
+  }
+  @include respond-below(md) {
+    font-size: 26px;
+  }
+}
+
+.title--white {
+  color: $color-white;
+}
+
+.subtitle {
+  color: $color-black;
+  font-family: $ff-base;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.bg-grey {
+  background-color: #f8f8f8;
+}
+
+ul {
+  list-style: none;
+}
+
+.fd-row-reverse {
+  flex-direction: row-reverse;
+}
+
+p {
+  color: $color-black;
+  line-height: 28.04px;
+  font-family: $ff-base;
+  font-size: 18px;
+  font-weight: 400;
+  @include respond-below(md_plus) {
+    line-height: 24.04px;
+    font-size: 16px;
+  }
+  @include respond-below(md) {
+    line-height: 22.04px;
+  }
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}

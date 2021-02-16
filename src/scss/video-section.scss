@@ -1,0 +1,120 @@
+.video-section {
+  .container {
+    overflow: hidden;
+  }
+  &__wrap {
+    margin: 0 -50px;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $ff-base;
+    @include respond-below(lg) {
+      padding: 60px 20px;
+    }
+    @include respond-below(md_plus) {
+      padding: 50px 20px;
+    }
+    @include respond-below(sm) {
+      padding: 40px 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+  }
+  &__text {
+    margin: 0 50px;
+    flex: 0 0 calc(100% / 2 - 100px);
+    @include respond-below(sm) {
+      flex: 0 0 100%;
+      margin: 0;
+    }
+  }
+  &__video {
+    margin: 0 50px;
+    flex: 0 0 calc(100% / 2 - 100px);
+    position: relative;
+    &:hover {
+      .video__btn {
+        opacity: 1;
+        box-shadow: 0 0 0 7px rgba($color-white, 0.2);
+      }
+    }
+    @include respond-below(sm) {
+      flex: 0 0 100%;
+      margin: 0;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+    }
+    .video__btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      width: 93px;
+      height: 93px;
+      border-radius: 50%;
+      background-color: $color-white;
+      background-image: url('../img/play-btn.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: $transition-base;
+      box-shadow: 0 0 0 7px rgba($color-white, 0.2);
+      opacity: 0;
+      cursor: pointer;
+      &:hover,
+      &:active,
+      &:focus {
+        box-shadow: 0 0 0 17px rgba($color-white, 0.2);
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 32px;
+    @include respond-below(md_plus) {
+      margin-bottom: 28px;
+    }
+    @include respond-below(md) {
+      margin-bottom: 24px;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 32px;
+    @include respond-below(md_plus) {
+      margin-bottom: 28px;
+    }
+    @include respond-below(md) {
+      margin-bottom: 24px;
+    }
+  }
+  p {
+    margin-bottom: 30px;
+    @include respond-below(md_plus) {
+      margin-bottom: 28px;
+    }
+    @include respond-below(md) {
+      margin-bottom: 24px;
+    }
+  }
+  &__link {
+    color: $color-black;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+  &__author {
+    strong {
+      color: $color-black;
+      font-size: 24px;
+      font-weight: 700;
+      @include respond-below(md_plus) {
+        font-size: 22px;
+      }
+      @include respond-below(md) {
+        font-size: 20px;
+      }
+    }
+  }
+}

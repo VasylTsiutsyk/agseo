@@ -1,0 +1,104 @@
+.faq {
+  &__wrap {
+    padding: 80px 0;
+    @include respond-below(md_plus) {
+      padding: 60px 0;
+    }
+    @include respond-below(md) {
+      padding: 50px 0;
+    }
+    @include respond-below(sm) {
+      padding: 40px 0;
+    }
+  }
+  &__title {
+    margin-bottom: 37px;
+    @include respond-below(md_plus) {
+      margin-bottom: 34px;
+    }
+    @include respond-below(md) {
+      margin-bottom: 30px;
+    }
+    @include respond-below(sm) {
+      margin-bottom: 26px;
+    }
+  }
+  &__list {
+    margin: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    @include respond-below(md) {
+      margin: -10px;
+    }
+  }
+  &__item {
+    margin: 15px;
+    padding: 30px;
+    width: calc(100% / 2 - 30px);
+    border-radius: 5px;
+    background-color: $color-white;
+    @include respond-below(md_plus) {
+      padding: 20px;
+    }
+    @include respond-below(md) {
+      width: calc(100% / 1 - 20px);
+      margin: 10px;
+      padding: 10px;
+    }
+    @include respond-below(xs) {
+      text-align: center;
+    }
+    h3 {
+      margin-bottom: 20px;
+      font-family: $ff-base;
+      font-size: 21px;
+      font-weight: 700;
+    }
+    p {
+      margin-bottom: 30px;
+      @include respond-below(md_plus) {
+        margin-bottom: 26px;
+      }
+      @include respond-below(md) {
+        margin-bottom: 20px;
+      }
+      @include respond-below(sm) {
+        margin-bottom: 10px;
+      }
+    }
+    .inner__list {
+      li {
+        margin-bottom: 10px;
+        padding-left: 15px;
+        color: inherit;
+        font-family: $ff-base;
+        font-size: 18px;
+        font-weight: 400;
+        position: relative;
+        @include respond-below(md_plus) {
+          line-height: 24.04px;
+          font-size: 16px;
+        }
+        @include respond-below(md) {
+          line-height: 22.04px;
+        }
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        &::before {
+          display: inline-block;
+          content: '';
+          position: absolute;
+          top: 9px;
+          left: 0;
+          transform: translateY(-50%);
+          border-radius: 50%;
+          height: 7px;
+          width: 7px;
+          margin-right: 0.5rem;
+          background-color: $color-pink;
+        }
+      }
+    }
+  }
+}

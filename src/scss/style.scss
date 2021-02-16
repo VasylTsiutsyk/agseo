@@ -1,36 +1,20 @@
-        @import "./mixins.scss";
-        @import "./vars.scss";
-        @import "./fonts.scss";
-        @import "./cursor.scss";
-        @import "./modelbox.scss";
-        @import "./burger.scss";
-        @import "./header.scss";
-        @import "./footer.scss";
-        @import "./swiper.scss";
-        @import "./svg-animate.scss";
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        html {
-            cursor: none;
-        }
-        
-        body {
-            position: relative;
-        }
-        
-        .container {
-            padding: 0 48px;
-            @include respond-below(md_plus) {
-                padding: 0 32px;
-            }
-            @include respond-below(sm) {
-                padding: 0 24px;
-            }
-            @include respond-below(xs) {
-                padding: 0 20px;
-            }
-        }
+@import 'normalize.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+@import 'vars.scss';
+@import 'global.scss';
+@import 'header.scss';
+@import 'burger.scss';
+@import 'baner.scss';
+@import 'video-section.scss';
+@import 'specialists.scss';
+@import 'choose.scss';
+@import 'team.scss';
+@import 'method.scss';
+@import 'strategy.scss';
+@import 'img-text.scss';
+@import 'growth-plan.scss';
+@import 'faq.scss';
+@import 'in-touch.scss';
+@import 'locations.scss';
+@import 'footer.scss';

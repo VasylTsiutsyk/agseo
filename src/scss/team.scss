@@ -1,0 +1,47 @@
+.team {
+  background-color: $color-green;
+  &__wrap {
+    padding: 100px 15px 30px;
+    @include respond-below(md_plus) {
+      padding: 80px 15px 20px;
+    }
+    @include respond-below(md) {
+      padding: 60px 15px 20px;
+    }
+    @include respond-below(sm) {
+      padding: 40px 15px 20px;
+    }
+    p {
+      margin-bottom: 30px;
+      color: $color-white;
+      @include respond-below(md_plus) {
+        margin-bottom: 25px;
+      }
+      @include respond-below(md) {
+        margin-bottom: 15px;
+      }
+      @include respond-below(sm) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 60px;
+    @include respond-below(md_plus) {
+      margin-bottom: 50px;
+    }
+    @include respond-below(md) {
+      margin-bottom: 40px;
+    }
+    @include respond-below(sm) {
+      margin-bottom: 30px;
+    }
+  }
+  &__img-box {
+    img {
+      margin: 0 auto;
+      display: block;
+      max-width: 100%;
+    }
+  }
+}

@@ -1,47 +1,183 @@
 .footer {
-    &__wrap {
-        padding: 40px 0;
-        @include respond-below(md_plus) {
-            padding: 32px 0;
-        }
+  background-color: #363636;
+  &__wrap {
+    padding: 100px 0 64px;
+    @include respond-below(md_plus) {
+      padding: 80px 0 40px;
+    }
+    @include respond-below(md) {
+      padding: 60px 0 30px;
+    }
+    @include respond-below(sm) {
+      padding: 40px 0 20px;
+    }
+    @include respond-below(xs) {
+      padding: 20px 0;
+    }
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    @include respond-below(sm) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__links-wrap {
+    margin: -10px -10px 40px;
+    display: flex;
+    & > div {
+      margin: 10px;
+    }
+    @include respond-below(lg) {
+      justify-content: space-between;
+      & > div {
+        flex: 1 1 calc(100% / 4 - 20px);
+      }
+    }
+    @include respond-below(md) {
+      flex-wrap: wrap;
+      & > div {
+        margin: 50px 10px;
+        flex: 1 1 calc(100% / 2 - 20px);
+      }
+    }
+    @include respond-below(sm) {
+      & > div {
+        text-align: center;
+        margin: 50px 0;
+        flex: 1 1 calc(100%);
+      }
+    }
+    @include respond-below(sm) {
+      & > div {
+        margin: 30px 0;
+      }
+    }
+  }
+
+  &__logo {
+    margin: 0 65px 65px 0;
+    @include respond-below(sm) {
+      text-align: center;
+      margin: 20px 0;
+    }
+  }
+  &__links {
+    flex: 1 0 135px;
+  }
+  &__services {
+    flex: 1 0 210px;
+  }
+  &__blog {
+    flex: 1 0 445px;
+  }
+  &__contacts {
+    flex: 1 0 210px;
+  }
+  &__title {
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    color: $color-white;
+    font-family: 'Proxima Nova';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    transition: $transition-base;
+    @include respond-below(sm) {
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 42px;
+      height: 3px;
+      left: 0;
+      bottom: 0;
+      background-color: $color-pink;
+      @include respond-below(sm) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  ul {
+    li {
+      a {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: $color-white;
+        font-family: 'Proxima Nova';
+        font-size: 17px;
+        font-weight: 400;
+        transition: $transition-base;
         @include respond-below(sm) {
-            padding: 24px 0;
+          margin-bottom: 10px;
         }
-        @include respond-below(xs) {
-            padding: 20px 0;
+        &:hover {
+          color: $color-pink;
         }
+      }
+      &:last-of-type {
+        a {
+          margin-bottom: 0;
+        }
+      }
     }
-    .soc__list {
+  }
+  .contacts {
+    &__google {
+      margin: 20px 0;
+      img {
+        max-width: 100%;
+      }
+    }
+    &__fb {
+      display: inline-block;
+      width: 51px;
+      height: 51px;
+      border-radius: 50%;
+      transition: $transition-base;
+      &:hover,
+      &:active,
+      &:focus {
+        box-shadow: 0 0 0 7px rgba($color-white, 0.2);
+      }
+      @include respond-below(sm) {
+        text-align: center;
+      }
+      a {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
         display: flex;
-        justify-content: start;
+        justify-content: center;
         align-items: center;
-        margin: 0 -8px;
-        list-style: none;
-        li {
-            margin: 8px;
-            display: flex;
-            align-items: center;
-            a {
-                font-family: "TT Travels";
-                font-size: 11px;
-                line-height: 13px;
-                letter-spacing: 0.02em;
-                color: $c-black;
-                text-transform: capitalize;
-                text-decoration: none;
-                transition: $transition-base;
-                cursor: none;
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
-        .soc__line {
-            display: inline-block;
-            width: 56px;
-            height: 1px;
-            background-color: $c-grey;
-            opacity: 0.24;
-        }
+        background-color: #494949;
+      }
     }
+  }
+
+  &__copyright {
+    padding-left: 184px;
+    @include respond-below(md_plus) {
+      padding-left: 160px;
+    }
+    @include respond-below(md) {
+      padding-left: 100px;
+    }
+    @include respond-below(sm) {
+      padding: 0;
+      text-align: center;
+    }
+    small {
+      color: $color-white;
+      font-family: $ff-base;
+      font-size: 17px;
+      font-weight: 400;
+    }
+  }
 }

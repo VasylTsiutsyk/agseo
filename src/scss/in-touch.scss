@@ -1,0 +1,194 @@
+.in-touch {
+  &__wrap {
+    padding: 80px 0;
+    @include respond-below(md_plus) {
+      padding: 60px 0;
+    }
+    @include respond-below(md) {
+      padding: 50px 0;
+    }
+    @include respond-below(sm) {
+      padding: 40px 0;
+    }
+  }
+  &__form {
+    margin: 0 auto;
+    padding: 70px;
+    max-width: 1166px;
+    box-shadow: 6px 10px 25px 2px rgba(0, 0, 0, 0.19);
+    background-color: $color-white;
+    @include respond-below(md_plus) {
+      max-width: 1000px;
+      padding: 50px;
+    }
+    @include respond-below(md) {
+      max-width: 100%;
+      padding: 40px;
+    }
+    @include respond-below(sm) {
+      padding: 30px;
+    }
+  }
+  &__title {
+    margin-bottom: 37px;
+    @include respond-below(md_plus) {
+      margin-bottom: 34px;
+    }
+    @include respond-below(md) {
+      margin-bottom: 30px;
+    }
+    @include respond-below(sm) {
+      margin-bottom: 26px;
+    }
+  }
+  p.text-centered {
+    margin-bottom: 62px;
+    @include respond-below(md) {
+      margin-bottom: 55px;
+    }
+    @include respond-below(sm) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__row {
+    margin: 0 -10px;
+    display: flex;
+    flex-wrap: wrap;
+    @include respond-below(sm) {
+      margin: 0;
+    }
+  }
+  &__input {
+    width: calc(100% / 2 - 20px);
+    margin: 0 10px 24px;
+    @include respond-below(sm) {
+      width: calc(100% / 1);
+      margin: 0 0 24px;
+    }
+    input {
+      width: 100%;
+      padding: 15px;
+      border-radius: 5px;
+      border: 1px solid #d1d1d1;
+      background-color: $color-grey;
+      font-size: 23px;
+      @include respond-below(md) {
+        padding: 10px;
+        font-size: 20px;
+      }
+      @include respond-below(sm) {
+        font-size: 18px;
+      }
+    }
+  }
+  label {
+    margin-bottom: 14px;
+    padding-left: 6px;
+    display: block;
+    color: inherit;
+    font-family: 'Proxima Nova';
+    font-size: 21px;
+    font-weight: 400;
+    @include respond-below(md) {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    @include respond-below(sm) {
+      font-size: 16px;
+    }
+  }
+  &__textarea {
+    margin-bottom: 29px;
+    textarea {
+      width: 100%;
+      min-height: 122px;
+      padding: 15px;
+      border-radius: 5px;
+      border: 1px solid #d1d1d1;
+      background-color: $color-grey;
+      font-size: 23px;
+      resize: none;
+      @include respond-below(md) {
+        min-height: 100px;
+      }
+    }
+  }
+  &__btn {
+    text-align: center;
+    input[type='submit'] {
+      padding: 20px 102px;
+      border: none;
+      border-radius: 32px;
+      background-color: $color-pink;
+      color: $color-white;
+      font-family: Montserrat;
+      font-size: 21px;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: $transition-base;
+      cursor: pointer;
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $color-pink-hover;
+      }
+      @include respond-below(xs) {
+        width: 100%;
+        padding: 10px;
+      }
+    }
+  }
+  &__check {
+    label {
+      padding-left: 35px;
+      margin-bottom: 40px;
+      display: block;
+      position: relative;
+      font-size: 22px;
+      user-select: none;
+      cursor: pointer;
+      @include respond-below(md) {
+        margin-bottom: 35px;
+      }
+      &:hover {
+        input ~ .checkmark {
+          background-color: $color-grey;
+        }
+      }
+      & input:checked ~ .checkmark:after {
+        display: block;
+      }
+      input {
+        position: absolute;
+        opacity: 0;
+        height: 1px;
+        width: 1px;
+        appearance: none;
+        display: none;
+        cursor: pointer;
+      }
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        border-radius: 5px;
+        border: 2px solid $color-pink;
+        &:after {
+          content: '';
+          position: absolute;
+          display: none;
+          right: 2px;
+          bottom: 6px;
+          width: 10px;
+          height: 20px;
+          border: solid $color-pink;
+          border-width: 0 3px 3px 0;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}

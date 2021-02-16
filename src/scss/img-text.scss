@@ -1,0 +1,90 @@
+.img-text {
+  .container {
+    overflow: hidden;
+  }
+  &__wrap {
+    padding: 84px 20px 77px;
+    @include respond-below(md_plus) {
+      padding: 80px 0 70px;
+    }
+    @include respond-below(md) {
+      padding: 60px 0 40px;
+    }
+    @include respond-below(sm) {
+      padding: 40px 0 20px;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+    @include respond-below(md_plus) {
+      margin-bottom: 25px;
+    }
+    @include respond-below(md) {
+      margin-bottom: 20px;
+    }
+    @include respond-below(sm) {
+      margin-bottom: 15px;
+    }
+  }
+  p {
+    margin-bottom: 30px;
+    @include respond-below(md_plus) {
+      margin-bottom: 25px;
+    }
+    @include respond-below(md) {
+      margin-bottom: 20px;
+    }
+    @include respond-below(sm) {
+      margin-bottom: 15px;
+    }
+  }
+  &__row {
+    margin: 0 -50px;
+    display: flex;
+    justify-content: space-between;
+    @include respond-below(md) {
+      flex-wrap: wrap;
+      margin: 0;
+    }
+  }
+  &__text,
+  &__img {
+    width: calc(100% / 2 - 100px);
+    margin: 0 50px;
+    @include respond-below(md) {
+      width: calc(100% / 1);
+      margin: 0;
+      text-align: center;
+    }
+  }
+  &__img {
+    position: relative;
+    height: 0;
+    padding-bottom: 28.125%;
+    overflow: hidden;
+    @include respond-below(md) {
+      padding-bottom: 56.25%;
+    }
+    &:hover {
+      .overlay {
+        background-color: rgba($color-black, 0.3);
+      }
+      img {
+        transform: scale(1.1);
+      }
+    }
+    img,
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.5s;
+      object-fit: cover;
+    }
+    .overlay {
+      background-color: rgba($color-black, 0);
+    }
+  }
+}
